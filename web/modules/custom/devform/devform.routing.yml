@@ -1,0 +1,7 @@
+devform.dev_form:
+  path: '/devform/form/dev'
+  defaults:
+    _form: '\Drupal\devform\Form\DevForm'
+    _title: 'DevForm'
+  requirements:
+    _access: 'TRUE'
