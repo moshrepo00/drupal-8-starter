@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains devform.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function devform_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the devform module.
+    case 'help.page.devform':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('a custom form in a custom module with a custom route') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function devform_theme() {
+  return [
+    'devform' => [
+      'render element' => 'children',
+    ],
+  ];
+}
